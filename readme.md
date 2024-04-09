@@ -61,3 +61,4 @@ II. Không có -> NA
      a. 1) Vứt: df.na.drop()
      b. 2) Điền: df.na.fill(value)
      c. 3) Tách: -> lọc
+![image](https://github.com/congcuongca1207/BIGDATA/assets/148767872/0928a391-8046-475b-8fb1-7a3e74e88cae)
