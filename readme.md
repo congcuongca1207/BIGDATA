@@ -29,3 +29,35 @@ Trong đó:
 5. Diện tích dưới đường cong ROC (Area Under the ROC Curve - AUC-ROC):
 - AUC-ROC là diện tích dưới đường cong ROC, một biểu đồ thể hiện tỷ lệ True Positive Rate (TPR) so với False Positive Rate (FPR) cho các ngưỡng dự đoán khác nhau.
 - Nó đo lường khả năng của mô hình phân loại đúng giữa các lớp dương và âm.
+-------------------------------------------------
+# Clean Data
+I. Có
+  1. Hình thức:
+    a. Sai định dạng: df.withColumn('column', df['column'].cast(...)
+     - Thừa
+       + Cột
+          . Chọn cột: df.select()
+          . Vứt cột: df.drop()
+        + Dòng
+          . Lọc dữ liệu: df.filter()
+          . Bỏ lặp: df.dropDuplicates(['cot'])
+    b. Nội dung
+      - Sai:
+        + Sửa: df.withColumn('age', when(df['age'] == 140, 40).otherwise(df['age']))
+        + Vứt: df[df['age']!=140]
+      - Ngoại lai
+        + Phát hiện:
+          . vẽ
+          . quantile: approxQuantile()
+          . standard deviation: stddev_samp()
+        + Xử lý
+          . Vứt: không được bằng / không nằm trong khoảng ngoại lai -> lọc dữ liệu -> .filter(...)
+          . Tách bảng:
+            + df1: filter trong khoảng bt
+            + df2: filter ngoài khoảng bt
+II. Không có -> NA
+  1. Kiểm tra NA: df.filter(df['col'].isNull())
+  2. Xử lý NA:
+     a. 1) Vứt: df.na.drop()
+     b. 2) Điền: df.na.fill(value)
+     c. 3) Tách: -> lọc
