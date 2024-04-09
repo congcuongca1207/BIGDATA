@@ -36,23 +36,23 @@ I. Có
     a. Sai định dạng: df.withColumn('column', df['column'].cast(...)
      - Thừa
        + Cột
-          . Chọn cột: df.select()
-          . Vứt cột: df.drop()
+          * Chọn cột: df.select()
+          * Vứt cột: df.drop()
         + Dòng
-          . Lọc dữ liệu: df.filter()
-          . Bỏ lặp: df.dropDuplicates(['cot'])
+          * Lọc dữ liệu: df.filter()
+          * Bỏ lặp: df.dropDuplicates(['cot'])
     b. Nội dung
       - Sai:
         + Sửa: df.withColumn('age', when(df['age'] == 140, 40).otherwise(df['age']))
         + Vứt: df[df['age']!=140]
       - Ngoại lai
         + Phát hiện:
-          . vẽ
-          . quantile: approxQuantile()
-          . standard deviation: stddev_samp()
+          * vẽ
+          * quantile: approxQuantile()
+          * standard deviation: stddev_samp()
         + Xử lý
-          . Vứt: không được bằng / không nằm trong khoảng ngoại lai -> lọc dữ liệu -> .filter(...)
-          . Tách bảng:
+          * Vứt: không được bằng / không nằm trong khoảng ngoại lai -> lọc dữ liệu -> .filter(...)
+          * Tách bảng:
             + df1: filter trong khoảng bt
             + df2: filter ngoài khoảng bt
 II. Không có -> NA
