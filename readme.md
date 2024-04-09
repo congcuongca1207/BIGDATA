@@ -53,8 +53,8 @@ I. Có
         + Xử lý
           * Vứt: không được bằng / không nằm trong khoảng ngoại lai -> lọc dữ liệu -> .filter(...)
           * Tách bảng:
-            + df1: filter trong khoảng bt
-            + df2: filter ngoài khoảng bt
+            +, df1: filter trong khoảng bt
+            +, df2: filter ngoài khoảng bt
 II. Không có -> NA
   1. Kiểm tra NA: df.filter(df['col'].isNull())
   2. Xử lý NA:
