@@ -62,3 +62,31 @@ II. Không có -> NA
      b. 2) Điền: df.na.fill(value)
      c. 3) Tách: -> lọc
 ![image](https://github.com/congcuongca1207/BIGDATA/assets/148767872/0928a391-8046-475b-8fb1-7a3e74e88cae)
+
+## Tiền xử lý:
+- Làm sạch
+- Chuẩn hóa
+- Tách: train & test || cross validation
+- Vector hóa
+ 
+## Mô hình dự đoán
+- Chạy mô hình:
+    - Classification : Decision Tree, Logistics Regresstion
+    - Regression : Linear Regression
+- Đánh giá:
+    - Classification
+        - Accuracy 
+        - Confusion Matrix
+    - Regression
+        - Precision, Recall, ...
+        - MSE
+        - RMSE
+        - MAE
+ 
+ 
+## After training
+- Underfit:
+    + Mô hình phức tạp hơn
+    + Feature Engineering
+- Overfit:
+    + Thêm nhiễu: L1 (Lasso), L2 (Ridge)
