@@ -40,7 +40,7 @@ I. Có
           * Vứt cột: df.drop()
         + Dòng
           * Lọc dữ liệu: df.filter()
-          * Bỏ lặp: df.dropDuplicates(['cot']) \\
+          * Bỏ lặp: df.dropDuplicates(['cot'])  \\
     b. Nội dung
       - Sai:
         + Sửa: df.withColumn('age', when(df['age'] == 140, 40).otherwise(df['age']))
